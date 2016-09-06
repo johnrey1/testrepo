@@ -1,0 +1,11 @@
+public with sharing class CORP_testclass implements Comparable {
+  public Integer value {get;set;}
+    
+  public Integer compareTo(Object compareTo) {
+    CORP_testclass compareToRecipient = compareTo;
+    
+    if(this.value == compareTo.value) return 0;
+    if(this.value > compareTo.value ) return 1;
+    if(this.value < compareTo.value ) return -1;
+  }
+}
